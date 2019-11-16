@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Data Science Playground</title>
+<title>The Official Host of Jonas</title>
 <style>
 
 @media only screen and (max-width:600px){
@@ -8,82 +8,63 @@
 }
 
 .glass{
-    /* background styles */
     position: relative;
     display: inline-block;
     padding: 15px 25px;
-    background-color: black; /*for compatibility with older browsers*/
-    background-image: linear-gradient(#002A44,black);
-
-    /* text styles */
-    text-decoration: none;
-    color: #fff;
-    font-size: 25px;
-    font-family: sans-serif;
-    font-weight: 100;
-
-    border-radius: 3px;
-    box-shadow: 0px 1px 4px -2px #333;
-    text-shadow: 0px -1px #333;
-    text-align:center;
-
-    white-space:nowrap;
-
-    width:150px;
-}
-
-.glass:after{
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: calc(100% - 4px);
-    height: 50%;
-    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+    background: none;
 }
 
 .glass:hover{
-    background: linear-gradient(silver,black);
+    background-color: white;
+    border-radius:25px;
 }
 
-.imageButton{
-    width:100px;
-    height:100px;
-    border-radius:15px;
+.jupyterImageButton{
+    width:500px;
+    height:220px;
+    border-radius:25px;
 }
-
+.keycloakImageButton{
+    width:150px;
+    height:150px;
+    border-radius:25px;
+}
 html,body {
   height: 100%;
   min-height: 100%;
 }
 
 body{
-  background-color: rgb(32, 32, 32);
-  background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0,0,0,1)), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
-  background-size: 100% 100%, 10px 10px, 10px 10px, 10px 5px;
-  background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px;
+  background-image: url("./images/2109.jpg");
+  background-attachment: scroll;
+  background-color: black;
+  background-size: 100% 100%;
 }
 
-div.aligner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  min-height: 100%;
+.container {
+    display: flex;              /* establish flex container */
+    flex-direction: column;     /* stack flex items vertically */
+    justify-content: center;    /* center items vertically, in this case */
+    align-items: center;        /* center items horizontally, in this case */
+    height: 100%;
 }
-
-div.aligned {
-  min-width: 708px;
-  max-width: 50%;
+.box {
+    width: 100%;
+    
+    text-align: center;
 }
-
 </style>
 </head>
 <body style="">
-<div class="aligner">
-<div class="aligned">
-<a href="https://www.wpcdas.com/jupyter" class="glass" title="JupyterHub" target="_blank"><img src="./images/jupyter.jpg" class="imageButton"/><br/>JupyterHub</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div id="container">
 
+<div class="box">
+<a href="https://www.jonas.host/jupyter" class="glass" title="JupyterHub" target="_blank"><img src="./images/jupyterhub.png" class="jupyterImageButton"/></a>
+</div>
+
+<br />
+<div class="box">
+<a href="https://www.jonas.host/auth" class="glass" title="KeyCloak" target="_blank"><img src="./images/keycloak.png" class="keycloakImageButton"/></a>
 </div>
 </div>
 </body>
