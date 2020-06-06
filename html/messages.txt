@@ -1,0 +1,1 @@
+Maintenance Message: There is an issue with browsers not enforcing a HTTPS redirect. If you are getting a "404 Not Found" page please try putting "https://" in front of the address you are trying to reach.

@@ -5,15 +5,17 @@ services:
     image: nginx:1.16.1
     volumes:
      - "./html:/usr/share/nginx/html:ro"
+     - "/volumes/traefik/certs:/etc/nginx/certs"
     deploy:
       replicas: 1
       labels:
         - "traefik.enable=true"
         - "traefik.http.routers.frontpage.rule=Host(`www.wpcdas.com`)"
-        - "traefik.http.routers.frontpage.entrypoints=https"
+        - "traefik.http.routers.frontpage.entrypoints=websecure"
         - "traefik.http.routers.frontpage.service=frontpage"
         - "traefik.http.services.frontpage.loadbalancer.server.port=80"
         - "traefik.http.routers.frontpage.tls=true"
+        
 #Traefik v1.7 config
 #      - "traefik.frontend.rule=Host:www.wpcdas.com,wpcdas.com"
 #      - "traefik.backend=frontpage"
